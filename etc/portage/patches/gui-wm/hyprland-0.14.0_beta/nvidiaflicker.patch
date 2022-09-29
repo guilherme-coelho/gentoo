@@ -1,0 +1,11 @@
+diff -Naru hyprland-0.14.0_beta.orig/subprojects/wlroots/render/gles2/renderer.c hyprland-0.14.0_beta/subprojects/wlroots/render/gles2/renderer.c
+--- hyprland-0.14.0_beta.orig/subprojects/wlroots/render/gles2/renderer.c       2022-09-29 13:57:55.288871661 -0300
++++ hyprland-0.14.0_beta/subprojects/wlroots/render/gles2/renderer.c    2022-09-29 14:02:12.211293429 -0300
+@@ -159,7 +159,7 @@
+                assert(wlr_egl_is_current(renderer->egl));
+
+                push_gles2_debug(renderer);
+-               glFlush();
++               glFinish();
+                glBindFramebuffer(GL_FRAMEBUFFER, 0);
+                pop_gles2_debug(renderer);
