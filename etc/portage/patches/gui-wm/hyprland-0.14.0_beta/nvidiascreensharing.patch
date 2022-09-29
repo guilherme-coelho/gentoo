@@ -1,0 +1,29 @@
+diff -Naru hyprland-0.14.0_beta.orig/subprojects/wlroots/types/output/render.c hyprland-0.14.0_beta/subprojects/wlroots/types/output/render.c
+--- hyprland-0.14.0_beta.orig/subprojects/wlroots/types/output/render.c 2022-09-29 13:57:55.285538340 -0300
++++ hyprland-0.14.0_beta/subprojects/wlroots/types/output/render.c      2022-09-29 13:59:37.091844531 -0300
+@@ -319,22 +319,7 @@
+
+        return format;
+ }
+-
+ uint32_t wlr_output_preferred_read_format(struct wlr_output *output) {
+-       struct wlr_renderer *renderer = output->renderer;
+-       assert(renderer != NULL);
+-
+-       if (!renderer->impl->preferred_read_format || !renderer->impl->read_pixels) {
+-               return DRM_FORMAT_INVALID;
+-       }
+-
+-       if (!output_attach_back_buffer(output, &output->pending, NULL)) {
+-               return false;
+-       }
+-
+-       uint32_t fmt = renderer->impl->preferred_read_format(renderer);
+-
+-       output_clear_back_buffer(output);
+-
+-       return fmt;
++    return DRM_FORMAT_XRGB8888;
+ }
++
+~       
