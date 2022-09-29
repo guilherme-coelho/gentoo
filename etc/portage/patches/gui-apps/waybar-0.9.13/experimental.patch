@@ -1,0 +1,9 @@
+diff -Naru Waybar1.9.13.orig/meson_options.txt Waybar-0.9.13/meson_options.txt
+--- Waybar-0.9.13.orig/meson_options.txt        2022-09-28 15:28:49.584961664 -0300
++++ Waybar-0.9.13/meson_options.txt     2022-09-28 15:29:31.084731545 -0300
+@@ -13,4 +13,4 @@
+ option('sndio', type: 'feature', value: 'auto', description: 'Enable support for sndio')
+ option('logind', type: 'feature', value: 'auto', description: 'Enable support for logind')
+ option('tests', type: 'feature', value: 'auto', description: 'Enable tests')
+-option('experimental', type : 'boolean', value : false, description: 'Enable experimental features')
++option('experimental', type : 'boolean', value : true, description: 'Enable experimental features')
