@@ -1,0 +1,38 @@
+diff -Naru hyprland-0.14.0_beta.orig/subprojects/wlroots/render/gles2/renderer.c hyprland-0.14.0_beta/subprojects/wlroots/render/gles2/renderer.c
+--- hyprland-0.14.0_beta.orig/subprojects/wlroots/render/gles2/renderer.c       2022-09-26 16:50:33.004131962 -0300
++++ hyprland-0.14.0_beta/subprojects/wlroots/render/gles2/renderer.c    2022-09-26 16:52:29.859804991 -0300
+@@ -159,7 +159,7 @@
+                assert(wlr_egl_is_current(renderer->egl));
+
+                push_gles2_debug(renderer);
+-               glFlush();
++               glFinish();
+                glBindFramebuffer(GL_FRAMEBUFFER, 0);
+                pop_gles2_debug(renderer);
+
+diff -Naru hyprland-0.14.0_beta.orig/subprojects/wlroots/types/output/render.c hyprland-0.14.0_beta/subprojects/wlroots/types/output/render.c
+--- hyprland-0.14.0_beta.orig/subprojects/wlroots/types/output/render.c 2022-09-26 16:50:33.000798643 -0300
++++ hyprland-0.14.0_beta/subprojects/wlroots/types/output/render.c      2022-09-26 16:54:01.132622959 -0300
+@@ -321,20 +321,6 @@
+ }
+
+ uint32_t wlr_output_preferred_read_format(struct wlr_output *output) {
+-       struct wlr_renderer *renderer = output->renderer;
+-       assert(renderer != NULL);
+-
+-       if (!renderer->impl->preferred_read_format || !renderer->impl->read_pixels) {
+-               return DRM_FORMAT_INVALID;
+-       }
+-
+-       if (!output_attach_back_buffer(output, &output->pending, NULL)) {
+-               return false;
+-       }
+-
+-       uint32_t fmt = renderer->impl->preferred_read_format(renderer);
+-
+-       output_clear_back_buffer(output);
+-
+-       return fmt;
++    return DRM_FORMAT_XRGB8888;
+ }
++                
