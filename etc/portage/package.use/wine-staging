@@ -1,0 +1,11 @@
+virtual/wine staging
+sys-apps/attr abi_x86_32
+app-emulation/wine-staging vkd3d
+app-emulation/vkd3d abi_x86_32
+x11-libs/xcb-util abi_x86_32
+x11-libs/xcb-util-keysyms abi_x86_32
+x11-libs/xcb-util-wm abi_x86_32
+x11-libs/xcb-util-cursor abi_x86_32
+x11-libs/xcb-util-image abi_x86_32
+x11-libs/xcb-util-renderutil abi_x86_32
+x11-libs/libXinerama abi_x86_32
