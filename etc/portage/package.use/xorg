@@ -1,3 +1,0 @@
-x11-base/xorg-server xvfb
-x11-libs/gtk+ -wayland
-media-gfx/imagemagick hdri
