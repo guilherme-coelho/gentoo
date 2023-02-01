@@ -313,7 +313,7 @@ Emerging the packages:
 
 Now with git installed we can switch Portage to git. Edit the following file to match it:
 
-<pre>(chroot) livecd # vim /etc/portage/repos.conf/gentoo.conf/
+<pre>(chroot) livecd # vim /etc/portage/repos.conf/gentoo.conf
 ...
 
 [DEFAULT]
