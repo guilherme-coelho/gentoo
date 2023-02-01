@@ -343,7 +343,7 @@ Now we sync it with:
 ### 5.Creating mount locations for other disks & adding a user ###
 Creating a user now? Are you absolutely insane? Well, there is a method for my madness. I will edit the fstab to be able to use RAM as a portage TMPDIR, so while I'm at it why not also include my other disks that I want on it? And for doing that, I need to create the mount points on the /media/user/ folder. So getting started:
 
-<code>(chroot) livecd # useradd -m -G audio,cdrom,floppy,games,portage,usb,video,wheel -s /bin/bash gui</code>
+<code>(chroot) livecd # useradd -m -G audio,cdrom,floppy,portage,usb,video,wheel -s /bin/bash gui</code>
 
 <code>(chroot) livecd # passwd gui </code>
 
