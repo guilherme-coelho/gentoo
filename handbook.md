@@ -228,7 +228,14 @@ livecd /mnt/gentoo # mount -t tmpfs -o nosuid,nodev,noexec shm /dev/shm
 livecd /mnt/gentoo # chmod 1777 /dev/shm
 </pre>
 
+One liner: 
+
 <pre>
+cp --dereference /etc/resolv.conf /mnt/gentoo/etc/ && mount -t proc /proc /mnt/gentoo/proc && mount --rbind /sys /mnt/gentoo/sys && mount --make-rslave /mnt/gentoo/sys && mount --rbind /dev /mnt/gentoo/dev && mount --make-rslave /mnt/gentoo/dev && mount --bind /run /mnt/gentoo/run && mount --make-slave /mnt/gentoo/run && test -L /dev/shm && rm /dev/shm && mkdir /dev/shm && mount -t tmpfs -o nosuid,nodev,noexec shm /dev/shm && chmod 1777 /dev/shm
+</pre> 
+
+
+<pre>x
 livecd /mnt/gentoo # chroot /mnt/gentoo /bin/bash 
 livecd / # source /etc/profile
 livecd / # export PS1="(chroot) $PS1"
