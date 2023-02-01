@@ -105,9 +105,9 @@ mkfs.fat 4.1 (2017-01-24)
 livecd ~# mkfs.vfat -F32 -n "BOOT" /dev/nvme0n1p2
 mkfs.fat 4.1 (2017-01-24)
 
-livecd ~# mkswap -L "swap" /dev/nvme0n1p3/
+livecd ~# mkswap -L "swap" /dev/nvme0n1p3
 
-livecd ~# mkfs.ext4 -L "root" /dev/nvme0n1p4/</pre>
+livecd ~# mkfs.ext4 -L "root" /dev/nvme0n1p4</pre>
 
 ### Mounting Filesystems ###
 
