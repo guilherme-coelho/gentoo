@@ -309,7 +309,7 @@ Masking perl:
 
 Emerging the packages:
 
-<code>(chroot) livecd # emerge vim htop dev-vcs/git eselect-repository ntfs3 </code>
+<code>(chroot) livecd # emerge vim htop dev-vcs/git eselect-repository ntfs3g </code>
 
 Now with git installed we can switch Portage to git. Edit the following file to match it:
 
