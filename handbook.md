@@ -235,7 +235,7 @@ cp --dereference /etc/resolv.conf /mnt/gentoo/etc/ && mount -t proc /proc /mnt/g
 </pre> 
 
 
-<pre>x
+<pre>
 livecd /mnt/gentoo # chroot /mnt/gentoo /bin/bash 
 livecd / # source /etc/profile
 livecd / # export PS1="(chroot) $PS1"
