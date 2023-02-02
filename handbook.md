@@ -684,7 +684,7 @@ enp5s0 is the name of my ethernet connection. I will be using NetworkManager on 
 
 Building networkmanager:
 
-<code> (chroot) livecd # emerge --ask net-misk/networkmanager</code>
+<code> (chroot) livecd # emerge --ask net-misc/networkmanager</code>
 
 Enabling enp5s0 to use DHCP:
 
